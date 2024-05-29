@@ -1,20 +1,19 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
+    // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"
 const firebaseConfig = {
-    apiKey: "AIzaSyAtfLIbVffZOiZZtodUARypcsPRy3m8EUo",
-    authDomain: "medical-scheduler-25e33.firebaseapp.com",
-    projectId: "medical-scheduler-25e33",
-    storageBucket: "medical-scheduler-25e33.appspot.com",
-    messagingSenderId: "330320814797",
-    appId: "1:330320814797:web:04cf99cc1b377c36b13f84",
-    measurementId: "G-TRBW8Q8YYT"
+    apiKey: "AIzaSyCc0wzuxgIfSYPiFrE8xtcPoS1Yrz8deAM",
+    authDomain: "medi-scheduler.firebaseapp.com",
+    projectId: "medi-scheduler",
+    storageBucket: "medi-scheduler.appspot.com",
+    messagingSenderId: "871932227510",
+    appId: "1:871932227510:web:5f61c93d291fd2a81b5b17"
   };
-
+ 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
  
   // Initialize Firebase
 

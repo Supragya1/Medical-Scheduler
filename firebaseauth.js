@@ -1,21 +1,19 @@
  // Import the functions you need from the SDKs you need
- import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
- import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
- import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
- import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
-  const firebaseConfig = {
-    apiKey: "AIzaSyAtfLIbVffZOiZZtodUARypcsPRy3m8EUo",
-    authDomain: "medical-scheduler-25e33.firebaseapp.com",
-    projectId: "medical-scheduler-25e33",
-    storageBucket: "medical-scheduler-25e33.appspot.com",
-    messagingSenderId: "330320814797",
-    appId: "1:330320814797:web:04cf99cc1b377c36b13f84",
-    measurementId: "G-TRBW8Q8YYT"
-  };
+    // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+ import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+ import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+ const firebaseConfig = {
+   apiKey: "AIzaSyCc0wzuxgIfSYPiFrE8xtcPoS1Yrz8deAM",
+   authDomain: "medi-scheduler.firebaseapp.com",
+   projectId: "medi-scheduler",
+   storageBucket: "medi-scheduler.appspot.com",
+   messagingSenderId: "871932227510",
+   appId: "1:871932227510:web:5f61c93d291fd2a81b5b17"
+ };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+ // Initialize Firebase
+ const app = initializeApp(firebaseConfig);
 
  function showMessage(message, divId){
     var messageDiv=document.getElementById(divId);
