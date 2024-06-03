@@ -25,7 +25,7 @@ submitBtn = document.querySelector('.submitBtn'),
   table = document.querySelector("table"),
   filterData = document.getElementById("search")
 
-let originalData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : []
+let originalData = localStorage.getItem('userProfile1') ? JSON.parse(localStorage.getItem('userProfile1')) : []
 let getData = [...originalData]
 
 
@@ -260,7 +260,7 @@ function editInfo(id, pic, fname, lname, Age, City, Position, Salary, SDate, Ema
 function deleteInfo(index){
     if(confirm("Aer you sure want to delete?")){
         originalData.splice(index, 1);
-        localStorage.setItem("userProfile", JSON.stringify(originalData));
+        localStorage.setItem("userProfile1", JSON.stringify(originalData));
         
         // Update getData after deleting the record
         getData = [...originalData];
@@ -322,7 +322,7 @@ form.addEventListener('submit', (e)=> {
         originalData[editId] = information
     }
     getData = [...originalData]
-    localStorage.setItem('userProfile', JSON.stringify(originalData))
+    localStorage.setItem('userProfile1', JSON.stringify(originalData))
 
     submitBtn.innerHTML = "Submit"
     modalTitle.innerHTML = "Fill the Form"
@@ -443,7 +443,7 @@ filterData.addEventListener("input", ()=> {
     }
 
     else{
-        getData = JSON.parse(localStorage.getItem('userProfile')) || []
+        getData = JSON.parse(localStorage.getItem('userProfile1')) || []
     }
 
 
