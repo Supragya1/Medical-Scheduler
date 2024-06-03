@@ -70,6 +70,7 @@
  const signIn=document.getElementById('submitSignIn');
  signIn.addEventListener('click', (event)=>{
     event.preventDefault();
+    localStorage.setItem('firebaseName', document.getElementById('name').value);
     const email=document.getElementById('email').value;
     const password=document.getElementById('password').value;
     const auth=getAuth();
