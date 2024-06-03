@@ -32,7 +32,7 @@ const firebaseConfig = {
                 document.getElementById('loggedUserFName').innerText=userData.firstName;
                 document.getElementById('loggedUserEmail').innerText=userData.email;
                 document.getElementById('loggedUserLName').innerText=userData.lastName;
-
+                localStorage.setItem('firebaseName', userData.firstName+" "+userData.lastName);
             }
             else{
                 console.log("no document found matching id")
@@ -51,6 +51,7 @@ const firebaseConfig = {
 
   logoutButton.addEventListener('click',()=>{
     localStorage.removeItem('loggedInUserId');
+    localStorage.removeItem('firebaseName');
     signOut(auth)
     .then(()=>{
         window.location.href='index.html';

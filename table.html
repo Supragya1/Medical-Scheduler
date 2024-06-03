@@ -13,6 +13,16 @@
 
     <title>Medicine Manager</title>
     <link rel="stylesheet" href="table.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "uMRPydeVdglNHz9qf",
+      });
+   })();
+</script>
 </head>
 <body>
     <style>
@@ -89,7 +99,7 @@
         <ul class="navbar">
           <li><a href="Home.html">Home</a></li>
           <li><a href="table.html">Medication Manager</li>
-          <li><a href="Home.html#About">About us</a>
+          <!-- <li><a href="Home.html#About">About us</a> -->
           <li><a href="Logout.html">Log out</a></li>
         </ul>
         <div id="menu__btn" class="fas fa-bars"></div>
@@ -308,7 +318,7 @@
              </div>
 
              <footer class="popupFooter">
-                <button form="myForm" class="submitBtn">Submit</button>
+                <button form="myForm" class="submitBtn" onclick="sendMail()">Submit</button>
              </footer>
         </div>
 

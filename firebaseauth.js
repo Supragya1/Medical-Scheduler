@@ -3,6 +3,7 @@
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
  import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
  const firebaseConfig = {
    apiKey: "AIzaSyCc0wzuxgIfSYPiFrE8xtcPoS1Yrz8deAM",
    authDomain: "medi-scheduler.firebaseapp.com",
@@ -47,6 +48,7 @@
         const docRef=doc(db, "users", user.uid);
         setDoc(docRef,userData)
         .then(()=>{
+            localStorage.setItem('firebaseName', userData.firstName+" "+userData.lastName);
             window.location.href='index.html';
         })
         .catch((error)=>{

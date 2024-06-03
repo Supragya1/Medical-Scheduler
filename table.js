@@ -454,3 +454,29 @@ filterData.addEventListener("input", ()=> {
 
 
 displayIndexBtn()
+
+
+function sendMail(){
+    var params = {
+        firebaseName: localStorage.getItem('firebaseName'),
+        MedName: fName.value,
+        Disease: lName.value,
+        Dose: city.value,
+        Frequency: position.value,
+        EndDate: sDate.value,
+        email: email.value
+    };
+const serviceId = "service_mkbvuqp";
+const templateId = "template_z9jy3d6";
+emailjs.send(serviceId, templateId, params)
+.then(function(response){
+    console.log('SUCCESS!', response.status, response.text);
+    alert("Email has been sent successfully");
+}, function(error){
+    console.log('FAILED...', error);
+})
+.catch((error)=>{
+    console.error('Error sending email:', error);
+});
+}
+
