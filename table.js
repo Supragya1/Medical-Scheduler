@@ -457,6 +457,22 @@ displayIndexBtn()
 
 
 function sendMail(){
+    var hen = Date.now();
+    firebase
+          .database()
+          .ref("Medication/" + hen)
+          .set({
+            id: hen,
+            name: fName.value+" " +lName.value,
+            Age: age.value,
+            Dose: city.value,
+            Frequency:position.value,
+            Reminder:salary.value,
+            End_Date:sDate.value,	
+            Email:email.value,
+            Phone:phone.value,
+          });
+          console.log("Data saved");
     var params = {
         firebaseName: localStorage.getItem('firebaseName'),
         MedName: fName.value,
