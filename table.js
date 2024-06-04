@@ -25,7 +25,7 @@ submitBtn = document.querySelector('.submitBtn'),
   table = document.querySelector("table"),
   filterData = document.getElementById("search")
 
-let originalData = localStorage.getItem('userProfile1') ? JSON.parse(localStorage.getItem('userProfile1')) : []
+let originalData = localStorage.getItem('userProfile2') ? JSON.parse(localStorage.getItem('userProfile2')) : []
 let getData = [...originalData]
 
 
@@ -260,7 +260,7 @@ function editInfo(id, pic, fname, lname, Age, City, Position, Salary, SDate, Ema
 function deleteInfo(index){
     if(confirm("Aer you sure want to delete?")){
         originalData.splice(index, 1);
-        localStorage.setItem("userProfile1", JSON.stringify(originalData));
+        localStorage.setItem("userProfile2", JSON.stringify(originalData));
         
         // Update getData after deleting the record
         getData = [...originalData];
@@ -322,7 +322,7 @@ form.addEventListener('submit', (e)=> {
         originalData[editId] = information
     }
     getData = [...originalData]
-    localStorage.setItem('userProfile1', JSON.stringify(originalData))
+    localStorage.setItem('userProfile2', JSON.stringify(originalData))
 
     submitBtn.innerHTML = "Submit"
     modalTitle.innerHTML = "Fill the Form"
@@ -443,7 +443,7 @@ filterData.addEventListener("input", ()=> {
     }
 
     else{
-        getData = JSON.parse(localStorage.getItem('userProfile1')) || []
+        getData = JSON.parse(localStorage.getItem('userProfile2')) || []
     }
 
 
@@ -482,8 +482,8 @@ function sendMail(){
         EndDate: sDate.value,
         email: email.value
     };
-const serviceId = "service_mkbvuqp";
-const templateId = "template_z9jy3d6";
+const serviceId = "service_7scfd7s";
+const templateId = "template_ucwh1sg";
 emailjs.send(serviceId, templateId, params)
 .then(function(response){
     console.log('SUCCESS!', response.status, response.text);
